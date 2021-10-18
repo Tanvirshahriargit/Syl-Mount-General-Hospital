@@ -1,0 +1,62 @@
+[
+    {   "id":1,
+        "name":"Hematology",
+        "des": "Hematology is the science or study of blood, blood-forming organs and blood diseases. In the medical field, hematology includes the treatment of blood disorders and malignancies, including types of hemophilia, leukemia, lymphoma and sickle-cell anemia.",
+        "img":"https://mountadora.com/wp-content/uploads/2019/07/Hematology-512_vectorized.png"
+    },
+    {   "id":2,
+        "name":"Nephrology",
+        "des": "Nephrology (from Greek nephros kidney, combined with the suffix -logy, the study of) is a specialty of adult internal medicine and pediatric medicine that concerns the study of the kidneys, specifically normal kidney function (renal physiology) and kidney disease (renal pathophysiology), the preservation of kidney",
+        "img":"https://mountadora.com/wp-content/uploads/2019/07/download-1_vectorized.png"
+    },
+    {   "id":3,
+        "name":"Physical Medicine",
+        "des": "Physical Medicine and Rehabilitation (PM&R), also known as physiatry, is a medical specialty that involves restoring function for a person who has been disabled as a result of a disease, disorder, or injury. ... A doctor who specializes in physical medicine and rehabilitation is called a physiatrist.",
+        "img":"https://mountadora.com/wp-content/uploads/2019/07/1.png"
+    },
+    {   "id":4,
+        "name":"Rheumatology",
+        "des": "Rheumatology (Greek ῥεῦμα, rheûma, flowing current) is a branch of medicine devoted to the diagnosis and therapy of rheumatic diseases.Rheumatologists deal mainly with immune-mediated disorders of the musculoskeletal system, soft tissues, autoimmune diseases, vasculitides, and inherited connective tissue disorders.",
+        "img":"https://mountadora.com/wp-content/uploads/2019/07/r.png"
+    },
+    {   "id":5,
+        "name":"Orthopedics",
+        "des": "Orthopedics is a branch of medicine that focuses on the care of the musculoskeletal system.A person who specializes in orthopedics is known as an orthopedist. Orthopedists use both surgical and nonsurgical approaches to treat a variety of musculoskeletal issues, such as sports injuries, joint pain, and back problems",
+        "img":"https://mountadora.com/wp-content/uploads/2019/07/73e4882e9d_vectorized.png"
+    },
+    {   "id":6,
+        "name":"Gynecology",
+        "des": "Gynaecology or gynecology (see spelling differences) is the medical practice dealing with the health of the female reproductive system.The term means the science of women. Its counterpart is andrology, which deals with medical issues specific to the male reproductive system.",
+        "img":"https://mountadora.com/wp-content/uploads/2019/07/podbean_icon_7_vectorized.png"
+    },
+    {   "id":7,
+        "name":"Psychiatry",
+        "des": "Psychotherapy, sometimes called talk therapy, is a treatment that involves a talking relationship between a therapist and patient. It can be used to treat a broad variety of mental disorders and emotional difficulties. The goal of psychotherapy is to eliminate or control disabling or troubling symptoms so the patient can function better.",
+        "img":"https://mountadora.com/wp-content/uploads/2019/07/1-2.png"
+    },
+    {   "id":8,
+        "name":"Gastroenterology",
+        "des": "Gastroenterology is the study of the normal function and diseases of the esophagus, stomach, small intestine, colon and rectum, pancreas, gallbladder, bile ducts and liver.In essence, all normal activity and disease of the digestive organs is part of the study of Gastroenterology.",
+        "img":"https://mountadora.com/wp-content/uploads/2019/07/gestro_vectorized.png"
+    },
+    {   "id":9,
+        "name":"Neurology",
+        "des": "Neurology is a branch of medicine dealing with disorders of the nervous system. Neurology deals with the diagnosis and treatment of all categories of conditions and disease involving the central and peripheral nervous systems, including their coverings, blood vessels.",
+        "img":"https://mountadora.com/wp-content/uploads/2019/07/Brain-Icon_vectorized.png"
+    },
+    {   "id":10,
+        "name":"Cardiology",
+        "des": "Cardiology is the study and treatment of disorders of the heart and the blood vessels. A person with heart disease or cardiovascular disease may be referred to a cardiologist. Cardiology is a branch of internal medicine.A cardiologist specializes in diagnosing and treating diseases of the cardiovascular system.",
+        "img":"https://mountadora.com/wp-content/uploads/2014/11/doctor_icon_2.png"
+    },
+    {   "id":11,
+        "name":"Medicine",
+        "des": "Medicine is the science and practice of caring for a patient, managing the diagnosis, prognosis, prevention, treatment, palliation of their injury or disease, and promoting their health. ",
+        "img":"https://mountadora.com/wp-content/uploads/2014/11/doctor_icon_1.png"
+    },
+    {   "id":12,
+        "name":"Oncology",
+        "des": "Oncology is the study of cancer. An oncologist is a doctor who treats cancer and provides medical care for a person diagnosed with cancer. An oncologist may also be called a cancer specialist. The field of oncology has 3 major areas based on treatments: medical oncology, radiation oncology, and surgical oncology.",
+        "img":"https://mountadora.com/wp-content/uploads/2019/07/download_vectorized-1.png"
+    }
+]

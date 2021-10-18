@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Link, NavLink } from 'react-router-dom';
 import Logo from "../../../logo.png"
 import "./Header.css"
 
@@ -12,12 +13,12 @@ const navbar = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
-                            <Nav.Link to="/home">Home</Nav.Link>
-                            <Nav.Link to="/services">Services</Nav.Link>
-                            <Nav.Link to="/specialist">Specialist</Nav.Link>
-                            <Nav.Link to="/corporate">Corporate</Nav.Link>
-                            <Nav.Link to="/contact">Contact Us</Nav.Link> 
-                            <Nav.Link to="/about">About</Nav.Link> 
+                            <NavLink className="link" to="/home">Home</NavLink>
+                            <NavLink className="link" to="/services">Services</NavLink>
+                            <NavLink className="link" to="/specialist">Specialist</NavLink>
+                            <NavLink className="link" to="/corporate">Corporate</NavLink>
+                            <NavLink className="link" to="/contact">Contact Us</NavLink> 
+                            <NavLink className="link" to="/about">About</NavLink> 
                         </Nav>
                         <Nav>
                             <button className="btn btn-primary mx-2 "> Log In</button>
