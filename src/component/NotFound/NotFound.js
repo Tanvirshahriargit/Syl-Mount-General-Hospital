@@ -6,9 +6,9 @@ import Notfound from "../../not-found.png"
 const NotFound = () => {
     return (
         <div>
-            <img className="img-fluid w-100" src={Notfound} alt="" />
+            <img className="img-fluid d-flex mx-auto justify-content-center align-items-center mt-3" src={Notfound} alt="" />
             <Link to="/home"><div className="d-grid gap-2">
-                <Button variant="primary my-4" size="lg">
+                <Button variant="btn btn-primary d-flex mx-auto justify-content-center align-items-center m-3 ">
                     Go Back Home
                 </Button>
             </div></Link>

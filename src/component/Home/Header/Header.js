@@ -1,10 +1,13 @@
 import React from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { Link, NavLink } from 'react-router-dom';
+import UseAuth from '../../../Hooks/UseAuth';
 import Logo from "../../../logo.png"
 import "./Header.css"
 
 const navbar = () => {
+    const { user, logOut } = UseAuth();
+    console.log(user);
     return (
         <div>
             <Navbar collapseOnSelect expand="lg" bg="light" className="text-dark" sticky="top">
@@ -12,7 +15,7 @@ const navbar = () => {
                     <img src={Logo} alt="" />
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
-                        <Nav className="me-auto">
+                        <Nav>
                             <NavLink className="link" to="/home">Home</NavLink>
                             <NavLink className="link" to="/services">Services</NavLink>
                             <NavLink className="link" to="/specialist">Specialist</NavLink>
@@ -21,11 +24,14 @@ const navbar = () => {
                             <NavLink className="link" to="/about">About</NavLink> 
                         </Nav>
                         <Nav>
-                            <button className="btn btn-primary mx-2 "> Log In</button>
-                            <button className="btn btn-primary mx-2 "> Register</button>
-                            <Nav.Link eventKey={2} href="#memes">
-                                Dank memes
-                            </Nav.Link>
+                            {  user?.email?
+                                <Button  onClick={logOut}>LogOut</Button>:
+                                <NavLink className="link m-4 ms-0" to="/login">Log In</NavLink>}
+                        <NavLink className="link mt-4 " to="/register">Register</NavLink> 
+                        <div className="d-flex mx-auto justify-content-center align-items-center">
+                                <a> User Name:  {user?.displayName}</a>
+                                <img className="rounded-circle h-50" src={ user?.photoURL}alt="" />
+                        </div>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
