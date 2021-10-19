@@ -4,18 +4,18 @@ const SpecialistDoctor = ({ specialist }) => {
     const { name, phone,specalist, design, img } = specialist;
     return (
         <div>
-            <div class="col-md-6 card mb-3 mx-auto">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src={img} class="img-fluid rounded-start" alt="..."/>
+            <div className="col-md-6 card mb-3 mx-auto">
+                <div className="row g-0">
+                    <div className="col-md-4">
+                        <img src={img} className="img-fluid rounded-start" alt="..."/>
                     </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">{name}</h5>
+                    <div className="col-md-8">
+                        <div className="card-body">
+                            <h5 className="card-title">{name}</h5>
                             <p>{ design}</p>
-                            <p class="card-text">
-                                {specalist}</p>
-                            <p class="card-text"><small class="text-muted">{ phone}</small></p>
+                            <p className="card-text">
+                            <i className="fas fa-hospital-user"></i>  {specalist}</p>
+                            <p className="card-text"><small className="text-muted text-center"> <i className="fas fa-phone-square-alt text-dark"></i>  { phone}</small></p>
                         </div>
                     </div>
                 </div>

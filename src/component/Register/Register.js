@@ -10,7 +10,7 @@ const Register = () => {
             <hr className="mx-auto w-50 border border-1 border-primary" />
             <br />
             <div className="row">
-                
+
                 {/* left side Form*/}
                 <div className="d-flex justify-content-center align-items-center col-md-6 col-12">
                     <form onSubmit={handleRegister}>
@@ -31,7 +31,7 @@ const Register = () => {
                         </div>
                         <button type="submit" className="mb-3 btn btn-primary d-flex justify-content-center align-items-center">Register</button>
                         <h1 className="fs-2 rounded-circle d-flex mx-auto justify-content-center align-items-center">--------------or---------------</h1>
-                        <button onClick={handleGoogleSignIn} className="btn btn-primary">Register With Google</button>
+                        <button onClick={handleGoogleSignIn} className="btn btn-primary"><i className="fab fa-google"></i> Register With Google</button>
                         <br />
                         <p className="mt-3">Already account? <Link to="login">Log In</Link></p>
                     </form>

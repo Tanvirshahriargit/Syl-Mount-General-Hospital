@@ -19,13 +19,12 @@ const navbar = () => {
                             <NavLink className="link" to="/home">Home</NavLink>
                             <NavLink className="link" to="/services">Services</NavLink>
                             <NavLink className="link" to="/specialist">Specialist</NavLink>
-                            <NavLink className="link" to="/corporate">Corporate</NavLink>
                             <NavLink className="link" to="/contact">Contact Us</NavLink> 
                             <NavLink className="link" to="/about">About</NavLink> 
                         </Nav>
                         <Nav>
                             {  user?.email?
-                                <Button  onClick={logOut}>LogOut</Button>:
+                                <Button className="btn btn-light"  onClick={logOut}>LogOut</Button>:
                                 <NavLink className="link m-4 ms-0" to="/login">Log In</NavLink>}
                         <NavLink className="link mt-4 " to="/register">Register</NavLink> 
                         <div className="d-flex mx-auto justify-content-center align-items-center">

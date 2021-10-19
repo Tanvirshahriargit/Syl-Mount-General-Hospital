@@ -11,6 +11,9 @@ import AuthProvider from './Context/AuthProvider';
 import PrivetRoute from './component/Login/PrivetRoute/PrivetRoute';
 import Specialist from './component/Home/Specialist/Specialist';
 import Register from './component/Register/Register';
+import About from './component/Home/About/About';
+import Contact from './component/Home/Contact/Contact';
+import Footer from './component/Footer/Footer';
 
 
 function App() {
@@ -38,13 +41,20 @@ function App() {
             <Route path="/register">
               <Register></Register>
             </Route>
-            <Route path="/specialist">
+            <PrivetRoute path="/specialist">
               <Specialist></Specialist>
+            </PrivetRoute>
+            <Route path="/about">
+              <About></About>
             </Route>
+            <PrivetRoute path="/contact">
+              <Contact></Contact>
+            </PrivetRoute>
             <Route path="*">
               <NotFound></NotFound>
             </Route>
           </Switch>
+          <Footer></Footer>
         </Router>
       </AuthProvider>
     </div>

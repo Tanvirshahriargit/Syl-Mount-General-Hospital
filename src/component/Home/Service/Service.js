@@ -11,7 +11,7 @@ const Service = ({ service }) => {
                     <img src={img} alt="" />
                     <h3>{name}</h3>
                 <p className="text-strat" >{des}</p>
-                <Link to={`/moreinformation/${id}`}><button className="btn btn-primary mx-auto">More Information +</button></Link>
+                <Link to={`/moreinformation/${id}`}><button className="btn btn-primary mx-auto">More Information  <i className="fa fa-plus-circle" aria-hidden="true"></i></button></Link>
                 </div>
             </div>
     );

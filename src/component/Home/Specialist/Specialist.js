@@ -11,7 +11,7 @@ const Specialist = () => {
     return (
         <div>
             <h1 className="text-center text-info">All Specalist Doctors </h1>
-            <hr className="mx-auto w-25 border border-1 border-info" />
+            <hr className="mx-auto w-50 border border-1 border-info" />
             <div className="row">
                 {
                     specialists.map(specialist => <SpecialistDoctor

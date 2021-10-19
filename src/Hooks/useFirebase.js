@@ -1,4 +1,4 @@
-import { getAuth, signInWithPopup, GoogleAuthProvider ,signOut, onAuthStateChanged, createUserWithEmailAndPassword ,signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import { useEffect, useState } from "react";
 import initializeAuthentication from "../component/Login/Firebase/Firebase.init";
 
@@ -9,22 +9,25 @@ initializeAuthentication();
 const useFirebase = () => {
     const [user, setUser] = useState({});
     const [error, setError] = useState({});
-    const [ email, setEmail ] = useState("");
+    const [email, setEmail] = useState("");
     const [pass, setPass] = useState("");
+    const [loading, setLoading] = useState(true);
     const googleProvider = new GoogleAuthProvider();
     const auth = getAuth();
 
-// signIngoogle Event Handler
+    // signIngoogle Event Handler
     const handleGoogleSignIn = () => {
+        setLoading(true);
         signInWithPopup(auth, googleProvider)
             .then(result => {
-            setUser(result.user)
+                setUser(result.user)
             })
             .catch(error => {
                 setError(error.message);
-        })
+            })
+            .finally(() => setLoading(false));
     }
-// user manager observer
+    // user manager observer
     useEffect(() => {
         const unsubscript = onAuthStateChanged(auth, user => {
             if (user) {
@@ -33,6 +36,7 @@ const useFirebase = () => {
             else {
                 setUser({})
             }
+            setLoading(false);
         })
         return () => unsubscript;
     }, [])
@@ -41,14 +45,16 @@ const useFirebase = () => {
     // prevent reload
     const handleSignin = e => {
         console.log(email, pass);
+        setLoading(true);
         signInWithEmailAndPassword(auth, email, pass)
             .then(result => {
                 const user = result.user;
-                console.log(user);
+                console.log(user)
             })
             .catch(error => {
-                setError(error.message);
-        })
+                setError(error.message)
+            })
+            .finally(() => setLoading(false));
         e.preventDefault();
     }
 
@@ -62,7 +68,7 @@ const useFirebase = () => {
             })
             .catch(error => {
                 setError(error.message);
-        })
+            })
 
         e.preventDefault();
     }
@@ -76,13 +82,16 @@ const useFirebase = () => {
         setPass(e.target.value);
     }
 
-//  LogOut User Event Handler
+    //  LogOut User Event Handler
     const logOut = () => {
+        setLoading(true)
         signOut(auth)
-        .then(()=>{})
+            .then(() => { })
+            .finally(() => setLoading(false));
     }
     return {
         user,
+        loading,
         handleGoogleSignIn,
         handleSignin,
         handleRegister,
