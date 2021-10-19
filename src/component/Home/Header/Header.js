@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Container, Nav, Navbar } from 'react-bootstrap';
+import { Button, ButtonGroup, Container, Nav, Navbar } from 'react-bootstrap';
 import { Link, NavLink } from 'react-router-dom';
 import UseAuth from '../../../Hooks/UseAuth';
 import Logo from "../../../logo.png"
@@ -29,7 +29,7 @@ const navbar = () => {
                                 <NavLink className="link m-4 ms-0" to="/login">Log In</NavLink>}
                         <NavLink className="link mt-4 " to="/register">Register</NavLink> 
                         <div className="d-flex mx-auto justify-content-center align-items-center">
-                                <a> User Name:  {user?.displayName}</a>
+                                {user?.email && <span>User Name: { user?.displayName}</span>}
                                 <img className="rounded-circle h-50" src={ user?.photoURL}alt="" />
                         </div>
                         </Nav>

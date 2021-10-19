@@ -8,6 +8,9 @@ import Services from './component/Home/Services/Services';
 import ModeInformation from './component/ModeInformation/ModeInformation';
 import LogIn from './component/Login/LogIn/LogIn';
 import AuthProvider from './Context/AuthProvider';
+import PrivetRoute from './component/Login/PrivetRoute/PrivetRoute';
+import Specialist from './component/Home/Specialist/Specialist';
+import Register from './component/Register/Register';
 
 
 function App() {
@@ -29,8 +32,14 @@ function App() {
             <Route path="/login">
               <LogIn></LogIn>
             </Route>
-            <Route path="/moreinformation/:serviceId">
+            <PrivetRoute path="/moreinformation/:serviceId">
               <ModeInformation></ModeInformation>
+            </PrivetRoute>
+            <Route path="/register">
+              <Register></Register>
+            </Route>
+            <Route path="/specialist">
+              <Specialist></Specialist>
             </Route>
             <Route path="*">
               <NotFound></NotFound>
