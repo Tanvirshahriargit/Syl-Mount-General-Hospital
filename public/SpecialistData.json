@@ -1,0 +1,44 @@
+[
+    {   "id":123451,
+        "name":"DR. FATEMATUZ ZUHORA",
+        "phone": "0161236475" ,
+        "design": "MBBS, FCPS(Gynae & Obs) Trained in Laparoscopic Surgery & Infertility Treatment Professor(ex) Gynae & Obs), Jalalbad Ragib-Rabeya Medical College",
+        "specalist": "ENT Specalist and Head Neck Surgeon",
+        "img":"https://mountadora.com/wp-content/uploads/2019/09/fatema.jpg"
+    },
+    {   "id":123452,
+        "name":"PROF. DR. MD MATIUR RAHMAN",
+        "phone":"0181236477",
+        "design": "MBBS, MCPS, FCPS(Surgery), FCPS(Plastic and Reconstructive Surgery) Asst. Professor & Head of Dept. Plastic Surgery, SOMCH",
+        "specalist": "Neuro Medicine Specialist",
+        "img":"https://mountadora.com/wp-content/uploads/2019/07/matiur.png"
+    },
+    {   "id":123453,
+        "name":"PROF. DR. SYED ALAMGIR SAFWATH",
+        "phone":"0161236479",
+        "design": "MBBS, BCS (Health), FCPS (Surgery), MS (Hepatobiliary Surgery) BSMMU Sylhet Osmani Medical College & Hospital",
+        "specalist": "Medicine, Liver & Gastroenterology Specialist",
+        "img":"https://mountadora.com/wp-content/uploads/2019/07/09safawath-e1563256347277.png"
+    },
+    {   "id":123454,
+        "name":"Dr. Md. Abdul Mannan",
+        "phone":"0141236474",
+        "design": "MBBS (CU), BCS , M.Phil. (Psychiatry) Assistant Professor, Sylhet MAG Osmani Medical College, Sylhet",
+        "specalist": "Burn, Trauma, Plastic, and General Surgery Specialist",
+        "img":"https://mountadora.com/wp-content/uploads/2021/04/DSC_8801-removebg-preview.png"
+    },
+    {   "id":123455,
+        "name":"DR. SHUBHARTHI KAR",
+        "phone":"0151236479",
+        "design": "MBBS, MCPS, DLO Trained in Head & Neck Cancer Surgery- Bombay Associate Professor (Retd.) Sylhet MAG Osmani Medical College, Sylhet",
+        "specalist": "Kidney Diseases Specialist",
+        "img":"https://mountadora.com/wp-content/uploads/2019/09/shuvarti.png"
+    },
+    {   "id":123456,
+        "name":"PROF. DR. NADIRA BEGUM",
+        "phone":"0131236433",
+        "design": "MBBS, MS(Urology) , BCS (Health) Residential Surgeon (Urology), Syljhet MAG Osmani Medical College",
+        "specalist": "Obs. & Gynae Specialist & Surgeon",
+        "img":"https://mountadora.com/wp-content/uploads/2019/09/30kishwar.png"
+    }
+]
