@@ -1,6 +1,39 @@
+# Syl-Mount-General-Hospital-Website
+
+This project was Firebase, React ,React route, React Bootstrap.Visit My site [SylMountGeneralHispital](https://syl-mount-general-hospital.web.app/home).
+
+## Table of contents
+* [About Website](#about-website)
+* [Technologies](#technologies)
+* [Setup](#setup)
+
+## About Website
+* In this website you can see syl Mounnt General Hospital Detaiils
+
+* You can see our all information about services
+
+* Youn can call any doctors and they help to your health
+
+* This Is best website to your for infomation hospital
+
+* You Can log in with Google and gmail
+
+* You Can Register with Email 
+
+
+## Technologies
+Project is created with:
+* React
+* Firebase
+* Bootstrap 
+* React Router
+
+## Setup
+In the project directory, you can run:
+
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [SylMount](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
