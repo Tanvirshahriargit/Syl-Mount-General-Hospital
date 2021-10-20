@@ -25,13 +25,13 @@ const LogIn = () => {
                         <h2 className="text-primary mb-3">Login Your Account </h2>
                         <form onSubmit={handleSignin}>
                             <div className="row mb-3">
-                                <label htmlFor="inputEmail3" className="col-sm-2 col-form-label">Email</label>
+                                <label htmlFor="inputEmail3" className="col-sm-2 col-form-label mt-3">Email</label>
                                 <div className="col-sm-10">
                                     <input placeholder=" Provide Email" onBlur={handleEmailChange} type="email" className="form-control" id="inputEmail3" required />
                                 </div>
                             </div>
                             <div className="row mb-3">
-                                <label htmlFor="inputPassword3" className="col-sm-2 col-form-label ">Password</label>
+                                <label htmlFor="inputPassword3" className="col-sm-2 col-form-label mt-3 ">Password</label>
                                 <div className="col-sm-10">
                                     <input placeholder="Provide Password" onBlur={handlePasswordChange} type="password" className="form-control" id="inputPassword3" required />
                                 </div>

@@ -18,18 +18,18 @@ const Header = () => {
                             <NavLink className="link" to="/home">Home</NavLink>
                             <NavLink className="link" to="/services">Services</NavLink>
                             <NavLink className="link" to="/specialist">Specialist</NavLink>
-                            <NavLink className="link" to="/contact">Contact Us</NavLink> 
-                            <NavLink className="link" to="/about">About</NavLink> 
+                            <NavLink className="link" to="/contact">Contact Us</NavLink>
+                            <NavLink className="link" to="/about">About</NavLink>
                         </Nav>
-                        <Nav>
-                            {  user?.email?
-                                <Button className="btn btn-light"  onClick={logOut}>LogOut</Button>:
-                                <NavLink className="link m-4 ms-0" to="/login">Log In</NavLink>}
-                        <NavLink className="link mt-4 " to="/register">Register</NavLink> 
-                        <div className="d-flex mx-auto justify-content-center align-items-center">
-                                {user?.email && <span>User Name: { user?.displayName}</span>}
-                                <img className="rounded-circle h-50" src={ user?.photoURL}alt="" />
-                        </div>
+                        <Nav className="d-flex mx-auto justify-content-end align-items-center">
+                            {user?.email && <span className="m-4 ms-0"><i class="fas fa-user-shield text-primary"></i> User Name: {user?.displayName}
+                            </span>}
+                            {user?.email && <img height="50px" width="50px" className="rounded-circle mt-3 me-2" src={user?.photoURL} alt="" />}
+                            {user?.email ?
+                                <Button className="btn rounded-pill m-3 ms-0" onClick={logOut}>Logout <i class="fas fa-sign-out-alt"></i></Button> :
+                                <NavLink className="link m-3 ms-0" to="/login">Log In</NavLink>}
+                            {!user?.email &&
+                            <NavLink className="link " to="/register">Register</NavLink>}
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
