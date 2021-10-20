@@ -1,13 +1,12 @@
 import React from 'react';
-import { Button, ButtonGroup, Container, Nav, Navbar } from 'react-bootstrap';
+import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { Link, NavLink } from 'react-router-dom';
 import UseAuth from '../../../Hooks/UseAuth';
 import Logo from "../../../logo.png"
 import "./Header.css"
 
-const navbar = () => {
+const Header = () => {
     const { user, logOut } = UseAuth();
-    console.log(user);
     return (
         <div>
             <Navbar collapseOnSelect expand="lg" bg="light" className="text-dark" sticky="top">
@@ -39,4 +38,4 @@ const navbar = () => {
     );
 };
 
-export default navbar;
+export default Header;

@@ -19,7 +19,7 @@ const ModeInformation = () => {
             {/* <h1>More Information{serviceId}</h1> */}
             <h2 className="text-center text-primary mt-3">{singleInformation[0]?.name}</h2>
             <hr className="mx-auto w-50 border border-1 border-primary" />
-            <div className="col-md-4 col-12 text-center mb-5 mx-auto">
+            <div className="col-lg-4 col-md-4 col-12 text-center mb-5 mx-auto">
                 <div className="p-4 m-2 h-100 ">
                     <img className="mb-2" src={singleInformation[0]?.img} alt="" />
                     <h3 className="mb-3">{singleInformation[0]?.name}</h3>

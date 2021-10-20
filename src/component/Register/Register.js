@@ -3,7 +3,7 @@ import UseAuth from '../../Hooks/UseAuth';
 import RegisterImg from "../../Banner/register.png"
 
 const Register = () => {
-    const { handleRegister, handleEmailChange, handlePasswordChange, handleGoogleSignIn } = UseAuth();
+    const {checkerror, handleRegister, handleEmailChange, handlePasswordChange, handleGoogleSignIn } = UseAuth();
     return (
         <div>
             <h2 className="text-center text-primary mt-3">Please Register </h2>
@@ -29,6 +29,7 @@ const Register = () => {
                         </div>
                         <div className="row mb-3">
                         </div>
+                        <p className="text-danger">{ checkerror}</p>
                         <button type="submit" className="mb-3 btn btn-primary d-flex justify-content-center align-items-center">Register</button>
                         <h1 className="fs-2 rounded-circle d-flex mx-auto justify-content-center align-items-center">--------------or---------------</h1>
                         <button onClick={handleGoogleSignIn} className="btn btn-primary"><i className="fab fa-google"></i> Register With Google</button>

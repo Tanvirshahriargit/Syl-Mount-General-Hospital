@@ -6,7 +6,7 @@ import "./Service.css"
 const Service = ({ service }) => {
     const {id, name, des, img } = service;
     return (
-            <div  className="col-md-4 col-12 text-center mb-3 ">
+            <div  className="col-md-4 col-lg-4 col-12 text-center mb-3 ">
                 <div className="cart-container p-4 m-2  border h-100 ">
                     <img src={img} alt="" />
                     <h3>{name}</h3>

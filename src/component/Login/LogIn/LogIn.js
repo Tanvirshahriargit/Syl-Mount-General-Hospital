@@ -4,7 +4,7 @@ import UseAuth from '../../../Hooks/UseAuth';
 import loginImg from '../../../Banner/login.png';
 
 const LogIn = () => {
-    const { handleEmailChange, handlePasswordChange, handleSignin, handleGoogleSignIn } = UseAuth();
+    const {checkerror, handleEmailChange, handlePasswordChange, handleSignin, handleGoogleSignIn } = UseAuth();
 
     // use location path 
     const locaton = useLocation();
@@ -38,6 +38,7 @@ const LogIn = () => {
                             </div>
                             <div className="row mb-3">
                             </div>
+                            <p className="text-danger">{ checkerror}</p>
                             <button type="submit" className="mb-3 btn btn-primary d-flex justify-content-center align-items-center">Log In</button>
                             <h1 className="fs-2 rounded-circle d-flex mx-auto justify-content-center align-items-center">--------------or---------------</h1>
                             <button onClick={handleGoogleSignIn} className="btn btn-primary"><i className="fab fa-google"></i> Signin With Google</button>

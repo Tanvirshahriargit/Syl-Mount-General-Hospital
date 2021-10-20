@@ -12,6 +12,7 @@ const useFirebase = () => {
     const [email, setEmail] = useState("");
     const [pass, setPass] = useState("");
     const [loading, setLoading] = useState(true);
+    const [checkerror ,setCheckerror] = useState("")
     const googleProvider = new GoogleAuthProvider();
     const auth = getAuth();
 
@@ -41,26 +42,16 @@ const useFirebase = () => {
         return () => unsubscript;
     }, [])
 
-    // reload and sign in 
-    // prevent reload
-    const handleSignin = e => {
-        console.log(email, pass);
-        setLoading(true);
-        signInWithEmailAndPassword(auth, email, pass)
-            .then(result => {
-                const user = result.user;
-                console.log(user)
-            })
-            .catch(error => {
-                setError(error.message)
-            })
-            .finally(() => setLoading(false));
-        e.preventDefault();
-    }
 
     // prevent Reload an register
     const handleRegister = e => {
+        e.preventDefault();
         console.log(email, pass);
+        // validitain check
+        if (pass.length < 6) {
+            setCheckerror("Please Parovide Password at least 6 characters long")
+            return;
+        }
         createUserWithEmailAndPassword(auth, email, pass)
             .then(result => {
                 const user = result.user;
@@ -69,8 +60,6 @@ const useFirebase = () => {
             .catch(error => {
                 setError(error.message);
             })
-
-        e.preventDefault();
     }
     // handleEmailChange target
     const handleEmailChange = e => {
@@ -80,6 +69,29 @@ const useFirebase = () => {
     //handleEmailChange target
     const handlePasswordChange = e => {
         setPass(e.target.value);
+    }
+
+     // reload and sign in 
+    // prevent reload
+    const handleSignin = e => {
+        e.preventDefault();
+        console.log(email, pass);
+        // validitain check
+        if (pass.length < 6) {
+            setCheckerror("Please Parovide Password at least 6 characters long")
+            return;
+        }
+        setLoading(true);
+        signInWithEmailAndPassword(auth, email, pass)
+            .then(result => {
+                const user = result.user;
+                console.log(user)
+                setCheckerror('')
+            })
+            .catch(error => {
+                setError(error.message)
+            })
+            .finally(() => setLoading(false));
     }
 
     //  LogOut User Event Handler
@@ -92,6 +104,7 @@ const useFirebase = () => {
     return {
         user,
         loading,
+        checkerror,
         handleGoogleSignIn,
         handleSignin,
         handleRegister,
