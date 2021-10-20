@@ -10,8 +10,8 @@ const ModeInformation = () => {
                 .then(res => res.json())
                 .then(data => setServices(data));
         }, [])
-    
-   //filter single data 
+
+    //filter single data 
     const singleInformation = services.filter(information => information.id == serviceId);
 
     return (

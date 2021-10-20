@@ -11,6 +11,8 @@ const Header = () => {
         <div>
             <Navbar collapseOnSelect expand="lg" bg="light" className="text-dark" sticky="top">
                 <Container>
+                    {/* Logo  */}
+
                     <img src={Logo} alt="" />
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
@@ -21,6 +23,7 @@ const Header = () => {
                             <NavLink className="link" to="/contact">Contact Us</NavLink>
                             <NavLink className="link" to="/about">About</NavLink>
                         </Nav>
+                        {/* Right sections Login and Register */}
                         <Nav className="d-flex mx-auto justify-content-end align-items-center">
                             {user?.email && <span className="m-4 ms-0"><i class="fas fa-user-shield text-primary"></i> User Name: {user?.displayName}
                             </span>}

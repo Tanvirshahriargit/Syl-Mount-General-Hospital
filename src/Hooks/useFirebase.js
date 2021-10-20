@@ -12,7 +12,7 @@ const useFirebase = () => {
     const [email, setEmail] = useState("");
     const [pass, setPass] = useState("");
     const [loading, setLoading] = useState(true);
-    const [checkerror ,setCheckerror] = useState("")
+    const [checkerror, setCheckerror] = useState("")
     const googleProvider = new GoogleAuthProvider();
     const auth = getAuth();
 
@@ -71,7 +71,7 @@ const useFirebase = () => {
         setPass(e.target.value);
     }
 
-     // reload and sign in 
+    // reload and sign in 
     // prevent reload
     const handleSignin = e => {
         e.preventDefault();

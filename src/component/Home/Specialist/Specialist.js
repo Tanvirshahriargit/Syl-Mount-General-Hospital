@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import SpecialistDoctor from '../Banner/SpecialistDoctor/SpecialistDoctor';
+import SpecialistDoctor from '../../SpecialistDoctor/SpecialistDoctor';
 
 const Specialist = () => {
     const [specialists, setSpecialists] = useState([]);
     useEffect(() => {
         fetch("/SpecialistData.json")
             .then(res => res.json())
-        .then(data => setSpecialists(data))
-    },[])
+            .then(data => setSpecialists(data))
+    }, [])
     return (
         <div>
             <h1 className="text-center text-info">All Specalist Doctors </h1>
@@ -16,13 +16,13 @@ const Specialist = () => {
                 {
                     specialists.map(specialist => <SpecialistDoctor
                         key={specialist.id}
-                        specialist= {specialist}
+                        specialist={specialist}
                     >
-                       
-                   </SpecialistDoctor>) 
-            }    
+
+                    </SpecialistDoctor>)
+                }
             </div>
-            
+
         </div>
     );
 };

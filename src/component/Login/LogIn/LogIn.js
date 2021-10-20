@@ -1,14 +1,14 @@
 import React from 'react';
-import { Link ,useLocation} from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import UseAuth from '../../../Hooks/UseAuth';
 import loginImg from '../../../Banner/login.png';
 
 const LogIn = () => {
-    const {checkerror, handleEmailChange, handlePasswordChange, handleSignin, handleGoogleSignIn } = UseAuth();
+    const { checkerror, handleEmailChange, handlePasswordChange, handleSignin, handleGoogleSignIn } = UseAuth();
 
     // use location path 
     const locaton = useLocation();
-    console.log("from ",locaton.state?.from);
+    console.log("from ", locaton.state?.from);
     return (
         <div>
             <h2 className="text-center text-primary mt-3">Please Login Here</h2>
@@ -19,6 +19,7 @@ const LogIn = () => {
                 <div className="col-md-6 col-12">
                     <img className="img-fluid" src={loginImg} alt="" />
                 </div>
+
                 {/* Right Side Form */}
                 <div className="d-flex mx-auto justify-content-center align-items-center col-md-6 col-12">
                     <div>
@@ -38,11 +39,14 @@ const LogIn = () => {
                             </div>
                             <div className="row mb-3">
                             </div>
-                            <p className="text-danger">{ checkerror}</p>
+                            <p className="text-danger">{checkerror}</p>
                             <button type="submit" className="mb-3 btn btn-primary d-flex justify-content-center align-items-center">Log In</button>
                             <h1 className="fs-2 rounded-circle d-flex mx-auto justify-content-center align-items-center">--------------or---------------</h1>
+
+                            {/* Google Sign In Buttons */}
                             <button onClick={handleGoogleSignIn} className="btn btn-primary"><i className="fab fa-google"></i> Signin With Google</button>
                             <br />
+                            {/* Link Register */}
                             <p className="mt-3">Don't have an account? <Link to="register">Register</Link></p>
                         </form>
                     </div></div>
